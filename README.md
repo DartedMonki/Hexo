@@ -112,6 +112,19 @@ metadata:
 Anda dapat memberikan nilai default yang akan digunakan untuk menginisialisasi metadata dari postingan baru. Nilai dapat berupa primitif atau array.
 
 # Cara Pemakaian
+Setelah melakukan instalasi hexo, buatlah blog dengan menggunakan Hexo CLI Tool :
+``` bash
+hexo init <tempat penyimpanan> && $_
+```
+Lalu tentukan folder tempat meletakkan semua file dari blog tersebut.
+
+Setelah selesai melakukan setup, maka kita telah siap untuk menuliskan artikel pertama. 
+
+Untuk membuat artikel baru, maka ketikkan command: 
+``` bash
+hexo new post "name of the post"
+``` 
+Lokasi dari file tersebut akan berada di `source/_posts`
 
 # Pembahasan
 
