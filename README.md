@@ -29,6 +29,21 @@ Jika belum, ikuti petunjuk berikut untuk menginstal semua persyaratan.
 ## Untuk pengguna Mac
 Anda mungkin mengalami beberapa masalah saat kompilasi. Silakan instal Xcode dari App Store terlebih dahulu. Setelah Xcode diinstal, buka Xcode dan buka **Preferences -> Download -> Command Line Tools -> Install** untuk menginstal command line tools.
 
+## Login ke dalam server menggunakan SSH. 
+Untuk pengguna windows bisa menggunakan aplikasi [PuTTY](http://www.putty.org/).
+``` bash
+$ ssh username@ip -p 22
+```
+
+## Pastikan seluruh paket sistem kita up-to-date
+
+Pada Linux gunakan command berikut
+
+``` bash
+$ sudo apt-get update
+
+```
+
 ## Instal Git
 - Windows: Unduh & instal git.
 - Mac: Instal dengan Homebrew, MacPorts atau installer.
