@@ -114,6 +114,7 @@ $ hexo server -d
 ```
 setelah melakukan perintah diatas kita sudah bisa membuka hexo yang telah terinstal di localhsot kita ,berikut adalah output dari kode diatas apabila sukses membuat hexo dan juga tampilan hompage dari hexo tersebut.
 ![output init]
+
 ![dashboard]
 
 ### 2. Instal plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
@@ -122,26 +123,35 @@ $ npm install --save hexo-admin
 $ hexo server -d
 $ open http://localhost:4000/admin/
 ```
+setelah melakukan install , akan terbuat page admin secara otomatis , berikut adalah output dari install dan page admin. Walaupun ada error pada saat menginstal tapi program hexo ini tetap berjalan dengan lancar.
+![output admin]
+![admin dashboard]
+
 ## Menambahkan dan mengganti tema
 ### 1. Masuk ke directory projectname anda
 ``` bash
 $ cd my-blog
+$ cd themes
 ```
+Seltelah masuk ke folder themes kita clone tema yang di inginkan.
 ### 2. Clone tema yang diinginkan
 Kita gunakan tema clover sebagai contoh
 ``` bash
 $ git clone https://github.com/esappear/hexo-theme-clover.git
 ```
+![clone tema]
 ### 3. Set tema pada *_config.yml* pada root projek
-Ubah pada bagian `theme`
+Ubah pada bagian `theme` ganti dengan nama folder tema yang kita clone agar langsung berubah.
 ``` 
 theme : clover
 ```
+![texedit theme]
 ### 4. Tambah *hexo-renderer-sass*
 ``` bash
 $ npm install hexo-renderer-sass --save
 ```
-
+![output sass]
+![tema]
 # Maintenance
 ## Menambahkan password
 Jika Anda menggunakan plugin [hexo-admin](https://github.com/jaredly/hexo-admin) di live server Anda, Anda perlu perlindungan kata sandi. Untuk mengaktifkannya, Anda cukup menambahkan beberapa variabel konfigurasi ke hexo `_config.yml` Anda:
