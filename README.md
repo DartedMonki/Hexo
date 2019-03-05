@@ -23,6 +23,9 @@ Jika komputer Anda sudah memiliki ini, Cukup instal Hexo dengan npm:
 ``` bash
 $ npm install -g hexo-cli 
 ```
+Jika hexo telah terinstall maka pada saat dilakukan pengecekan versi akan muncul output seperti ini
+
+![output hexo]
 
 Jika belum, ikuti petunjuk berikut untuk menginstal semua persyaratan.
 
@@ -33,6 +36,7 @@ Anda mungkin mengalami beberapa masalah saat kompilasi. Silakan instal Xcode dar
 ``` bash
 $ ssh username@localhost -p 2222
 ```
+![Login]
 
 ## Pastikan seluruh paket sistem kita up-to-date
 
@@ -50,6 +54,8 @@ $ sudo apt-get update
 ``` bash
 $ sudo apt-get install git-core
 ```
+![update]
+
 - Linux (Fedora, Red Hat, CentOS): 
 ``` bash
 $ sudo yum install git-core
@@ -63,14 +69,23 @@ cURL:
 ``` bash
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
+![curl]
+
 Wget:
 ``` bash
 $ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
+![wget]
+
 Setelah nvm diinstal, restart terminal dan jalankan perintah berikut untuk menginstal Node.js:
 ``` bash
 $ nvm install stable
 ```
+![nvm]
+
+Jika sudah terinstal lakukan pengecekan agar memastikan node js sudah terinstal
+
+![version]
 
 Atau, unduh dan jalankan installer Node.Js.
 ## Instal Hexo
@@ -79,6 +94,10 @@ Setelah semua persyaratan diinstal, Anda dapat menginstal Hexo dengan npm:
 ``` bash
 $ npm install -g hexo-cli 
 ```
+Jika hexo telah terinstall maka pada saat dilakukan pengecekan versi akan muncul output seperti ini
+
+![output hexo]
+
 # Konfigurasi
 
 ## Sekilas tentang plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
@@ -91,7 +110,12 @@ $ cd ~/
 $ hexo init my-blog
 $ cd my-blog
 $ npm install
+$ hexo server -d
 ```
+setelah melakukan perintah diatas kita sudah bisa membuka hexo yang telah terinstal di localhsot kita ,berikut adalah output dari kode diatas apabila sukses membuat hexo dan juga tampilan hompage dari hexo tersebut.
+![output init]
+![dashboard]
+
 ### 2. Instal plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
 ``` bash
 $ npm install --save hexo-admin
