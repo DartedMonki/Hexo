@@ -25,7 +25,7 @@ $ npm install -g hexo-cli
 ```
 Jika hexo telah terinstall maka pada saat dilakukan pengecekan versi akan muncul output seperti ini
 
-![output hexo](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output%20hexo.PNG)
+![output hexo](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_hexo.PNG)
 
 Jika belum, ikuti petunjuk berikut untuk menginstal semua persyaratan.
 
@@ -69,7 +69,7 @@ cURL:
 ``` bash
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
-![curl](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/node curl.PNG)
+![curl](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/node_curl.PNG)
 
 Wget:
 ``` bash
@@ -85,7 +85,7 @@ $ nvm install stable
 
 Jika sudah terinstal lakukan pengecekan agar memastikan node js sudah terinstal
 
-![version](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/version nvm&npm.PNG)
+![version](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/version_nvm&npm.PNG)
 
 Atau, unduh dan jalankan installer Node.Js.
 ## Instal Hexo
@@ -96,7 +96,7 @@ $ npm install -g hexo-cli
 ```
 Jika hexo telah terinstall maka pada saat dilakukan pengecekan versi akan muncul output seperti ini
 
-![output hexo](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output%20hexo.PNG)
+![output hexo](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_hexo.PNG)
 
 # Konfigurasi
 
@@ -113,7 +113,7 @@ $ npm install
 $ hexo server -d
 ```
 setelah melakukan perintah diatas kita sudah bisa membuka hexo yang telah terinstal di localhsot kita ,berikut adalah output dari kode diatas apabila sukses membuat hexo dan juga tampilan hompage dari hexo tersebut.
-![output init](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output init.PNG)
+![output init](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_init.PNG)
 
 ![dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/dashboard.PNG)
 
@@ -124,7 +124,7 @@ $ hexo server -d
 $ open http://localhost:4000/admin/
 ```
 setelah melakukan install , akan terbuat page admin secara otomatis , berikut adalah output dari install dan page admin. Walaupun ada error pada saat menginstal tapi program hexo ini tetap berjalan dengan lancar.
-![output admin](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output admin.PNG)
+![output admin](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_admin.PNG)
 ![admin dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/admin.PNG)
 
 ## Menambahkan dan mengganti tema
@@ -139,19 +139,19 @@ Kita gunakan tema clover sebagai contoh
 ``` bash
 $ git clone https://github.com/esappear/hexo-theme-clover.git
 ```
-![clone tema](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/git clone tema.PNG)
+![clone tema](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/git_clone_tema.PNG)
 ### 3. Set tema pada *_config.yml* pada root projek
 Ubah pada bagian `theme` ganti dengan nama folder tema yang kita clone agar langsung berubah.
 ``` 
 theme : clover
 ```
-![texedit theme](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/textedit theme.PNG)
+![texedit theme](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/textedit_theme.PNG)
 ### 4. Tambah *hexo-renderer-sass*
 ``` bash
 $ npm install hexo-renderer-sass --save
 ```
 ![output sass](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/sass.PNG)
-![tema](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/tema new.PNG)
+![tema](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/tema_new.PNG)
 # Maintenance
 ## Menambahkan password
 Jika Anda menggunakan plugin [hexo-admin](https://github.com/jaredly/hexo-admin) di live server Anda, Anda perlu perlindungan kata sandi. Untuk mengaktifkannya, Anda cukup menambahkan beberapa variabel konfigurasi ke hexo `_config.yml` Anda:
