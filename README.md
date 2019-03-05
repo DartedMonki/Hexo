@@ -30,9 +30,8 @@ Jika belum, ikuti petunjuk berikut untuk menginstal semua persyaratan.
 Anda mungkin mengalami beberapa masalah saat kompilasi. Silakan instal Xcode dari App Store terlebih dahulu. Setelah Xcode diinstal, buka Xcode dan buka **Preferences -> Download -> Command Line Tools -> Install** untuk menginstal command line tools.
 
 ## Login ke dalam server menggunakan SSH. 
-Untuk pengguna windows bisa menggunakan aplikasi [PuTTY](http://www.putty.org/).
 ``` bash
-$ ssh username@ip -p 22
+$ ssh username@localhost -p 2222
 ```
 
 ## Pastikan seluruh paket sistem kita up-to-date
@@ -100,7 +99,24 @@ $ hexo server -d
 $ open http://localhost:4000/admin/
 ```
 ## Menambahkan dan mengganti tema
-
+### 1. Masuk ke directory projectname anda
+``` bash
+$ cd my-blog
+```
+### 2. Clone tema yang diinginkan
+Kita gunakan tema clover sebagai contoh
+``` bash
+$ git clone https://github.com/esappear/hexo-theme-clover.git
+```
+### 3. Set tema pada *_config.yml* pada root projek
+Ubah pada bagian `theme`
+``` 
+theme : clover
+```
+### 4. Tambah *hexo-renderer-sass*
+``` bash
+$ npm install hexo-renderer-sass --save
+```
 
 # Maintenance
 ## Menambahkan password
@@ -115,6 +131,8 @@ Password_hash adalah sebuah bcrypt hash dari kata sandi Anda. Secret digunakan u
 
 Sebuah utility di Pengaturan admin Hexo dapat melakukan hash pada kata sandi Anda dan membuat `admin` section untuk Anda. Mulai Hexo dan pergi ke `Settings > Setup authentification` dan isi informasi Anda. Salin YAML yang dihasilkan ke `_config.yml` Anda.
 
+[![Password](http://searlas.top/images/pasted-0.png)](https://github.com/DartedMonki)
+
 Setelah itu, mulai server hexo Anda dan pergi ke `/admin/`, Anda akan diminta untuk memasukkan kata sandi.
 
 ## Melakukan kustomisasi post metadata
@@ -127,6 +145,7 @@ metadata:
 Anda dapat memberikan nilai default yang akan digunakan untuk menginisialisasi metadata dari postingan baru. Nilai dapat berupa primitif atau array.
 
 # Cara Pemakaian
+## Membuat Blog
 Setelah melakukan instalasi hexo, buatlah blog dengan menggunakan Hexo CLI Tool :
 ``` bash
 hexo init <tempat penyimpanan> && $_
@@ -134,16 +153,74 @@ hexo init <tempat penyimpanan> && $_
 Lalu tentukan folder tempat meletakkan semua file dari blog tersebut.
 
 Setelah selesai melakukan setup, maka kita telah siap untuk menuliskan artikel pertama. 
-
+## Membuat artikel baru
 Untuk membuat artikel baru, maka ketikkan command: 
 ``` bash
 hexo new post "name of the post"
 ``` 
 Lokasi dari file tersebut akan berada di `source/_posts`
 
+## Membuat artikel baru dengan [hexo-admin](https://github.com/jaredly/hexo-admin)
+### 1. Pilih tab post
+Akan terlihat semua post yang telah dibuat
+[![TabPost](https://raw.githubusercontent.com/jaredly/hexo-admin/master/docs/pasted-0.png)](https://github.com/DartedMonki)
+## 2. Pilih new post
+Ketik isi post baru yang nantinya akan di preview secara real time di editor
+[![NewPost](https://raw.githubusercontent.com/jaredly/hexo-admin/master/docs/pasted-1.png)](https://github.com/DartedMonki)
+
 # Pembahasan
+Hexo merupakan sebuah blog framework yang cepat, sederhana, dan kuat yang didukung oleh [Node.js](https://nodejs.org). Anda menulis posting dalam Markdown (atau bahasa lain) dan Hexo menghasilkan file statis dengan tema yang indah dalam hitungan detik.
+
+## Kelebihan dan Kekurangan Hexo
+### Kelebihan
+Berikut merupakan kelebihan dari hexo :
+1. Tidak harus bolak-balik upload via FTP jika ingin mengupdate artikel baru
+2. Lain halnya dengan Hexo, aplikasi SSG yang dibuat menggunakan nodejs ini memiliki plugin yang bisa deploy website dengan banyak cara salah satunya dengan FTP
+3. Dapat dengan cepat create & deploy blog pribadi ke dalam Github Pages
+4. Memiliki banyak plugin yang dapat menunjang pembuatan blog
+5. Selain hanya membutuhkan resource yang kecil, website statis yang digenerate via tool seperti Hexo menghasilkan output yang kecil, apalagi gambarnya dihosting menggunakan Image Hosting seperti Blogger, Google Photos dan CDN Hosting lainnya
+6. Dukungan theme yang banyak
+
+### Kekurangan
+Disamping kelebihan, pastinya aplikasi ini memiliki kekurangan antara lain :
+1. Kontennya statis, tidak berubah-ubah
+2. Terbatas dalam interaksi dengan pengunjung
+3. Tidak menggunakan database
+4. Tidak menggunakan pemrograman PHP di server
+5. Hexo memiliki komunitas yang relatif besar tetapi mayoritas adalah penutur non-Inggris (dari Cina)
+
+## Perbedaan aplikasi Hexo dan aplikasi sejenisnya
+Aplikasi sejenis yang juga menggunakan SSG (Static Site Generator) yaitu Jekyll. Sejauh ini Jekyll adalah generator statis yang paling populer karena dibangun dan didukung oleh GitHub dan digunakan untuk layanan populer Halaman GitHub yang digunakan secara gratis untuk meng-host halaman statis untuk situs web pribadi atau proyek. Jekyll memiliki komunitas terbesar di antara generator statis lainnya yang telah menyediakan banyak tutorial, tema open source, dan plugin. Ini dipandang sebagai penantang WordPress di dunia statis dan banyak blogger telah memigrasikan blog mereka dari WordPress ke Jekyll. Di StackOverflow, Jekyll memiliki lebih banyak pertanyaan terkait daripada Hexo.
+
+### Kelebihan dan kekurangan Jekyll
+#### Kelebihan
+Kelebihan dari Jekyll :
+1. Gratis dan open source
+2. Anda dapat membangun tema sebagai gems dan mendistribusikannya melalui RubyGems
+3. Mudah dan sederhana untuk digunakan
+4. Anda dapat dengan mudah melakukan migrasi konten Anda dari platform populer (mis. WordPress) berkat importir Jekyll
+5. dukungan Github Pages yang luar biasa
+6. Hadir dengan tema minimal default dan layak di luar kotak
+#### Kekurangan
+Jekyll juga memiliki beberapa kekurangan seperti:
+1. Saat konten situs web Anda tumbuh, proses pembuatannya menjadi jauh lebih lambat (ini adalah kelemahan utama Jekyll)
+2. Incremental build yang masih dalam percobaan
+3. Tidak ada built-in post pagination pada Jekyll 3
+4. Tidak mendukung penggunaan variabel dalam judul atau YAML
+5. Banyak plugin yang outdated
+6. Dependensi gem dapat menyebabkan ketidaksesuaian/incompatible
+7. Github Pages mendukung Jekyll tetapi hanya satu set Github-safe-plugin yang dapat digunakan
+8. Tidak ada built-in support untuk livereload
+
+Ada lebih sedikit tutorial untuk Hexo dibandingkan dengan Jekyll tetapi dokumentasinya jelas, mudah diikuti dan lebih straightforward serta Hexo berbasis NodeJs yang mudah untuk diinstal. Pada hexo terdapat kumpulan tema yang dapat memanjakan mata serta mudah dalam mendeploynya ke GitHub Pages.
+
+Menggunakan Hexo (atau statis website lainnya) memberikan keuntungan dalam hal SEO karena dengan menggunakan website statis, kita bisa memanfaatkan hosting gratis yang space kecil (antara 5mb-10mb). Website statis yang dihasilkan oleh Hugo dan Hexo juga bisa digunakan pada server yang tidak mendukung PHP server seperti Apache, Nginx, Litespeed, dll. 
+
 
 # Referensi
+https://www.techiediaries.com/jekyll-hugo-hexo/
+
+https://kaqfa.github.io/2016/12/kenapa-saya-memilih-hexo/
 
 # Team
 | <a href="https://github.com/DartedMonki" target="_blank">**Afriyadi YR**</a> | <a href="https://github.com/reyhannuurakbar" target="_blank">**Reyhan NA**</a> | <a href="https://github.com/g64160084" target="_blank">**Feterachman BY**</a> | <a href="https://github.com/MarsaMD" target="_blank">**Marsa MD**</a> |
