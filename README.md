@@ -161,6 +161,7 @@ admin:
   password_hash: be121740bf988b2225a313fa1f107ca1
   secret: a secret something
 ```
+![admin](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/admin_kucingku.PNG)
 Password_hash adalah sebuah bcrypt hash dari kata sandi Anda. Secret digunakan untuk membuat cookie aman, lebih baik jika dibuat panjang dan rumit.
 
 Sebuah utility di Pengaturan admin Hexo dapat melakukan hash pada kata sandi Anda dan membuat `admin` section untuk Anda. Mulai Hexo dan pergi ke `Settings > Setup authentification` dan isi informasi Anda. Salin YAML yang dihasilkan ke `_config.yml` Anda.
@@ -168,7 +169,7 @@ Sebuah utility di Pengaturan admin Hexo dapat melakukan hash pada kata sandi And
 [![Password](http://searlas.top/images/pasted-0.png)](https://github.com/DartedMonki)
 
 Setelah itu, mulai server hexo Anda dan pergi ke `/admin/`, Anda akan diminta untuk memasukkan kata sandi.
-
+![admin dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/admin_login.PNG)
 ## Melakukan kustomisasi post metadata
 Untuk menambah dan mengedit post metadata Anda dengan antarmuka admin, tambahkan variabel metadata dan variabel khusus Anda ke hexo `_config.yml` Anda:
 ``` bash
@@ -176,6 +177,7 @@ metadata:
   author_id: defaultAuthorId
   language:
 ```
+![meta](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/metadata.PNG)
 Anda dapat memberikan nilai default yang akan digunakan untuk menginisialisasi metadata dari postingan baru. Nilai dapat berupa primitif atau array.
 
 # Cara Pemakaian
@@ -192,6 +194,8 @@ Untuk membuat artikel baru, maka ketikkan command:
 ``` bash
 hexo new post "name of the post"
 ``` 
+![2nd post](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/2nd_post.PNG)
+![2nd postpic](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/2nd_post_dashboard.PNG)
 Lokasi dari file tersebut akan berada di `source/_posts`
 
 ## Membuat artikel baru dengan [hexo-admin](https://github.com/jaredly/hexo-admin)
