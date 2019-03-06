@@ -117,7 +117,7 @@ Setelah melakukan perintah diatas kita sudah bisa membuka Hexo yang telah terins
 
 ![dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/dashboard.PNG)
 
-### 2. Ihttps://github.com/hexojs/hexonstal plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
+### 2. Instal plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
 ``` bash
 $ npm install --save hexo-admin
 $ hexo server -d
