@@ -23,7 +23,7 @@ Jika komputer Anda sudah memiliki ini, Cukup instal Hexo dengan npm:
 ``` bash
 $ npm install -g hexo-cli 
 ```
-Jika hexo telah terinstall maka pada saat dilakukan pengecekan versi akan muncul output seperti ini
+Jika Hexo telah terinstall maka pada saat dilakukan pengecekan versi akan muncul output seperti ini
 
 ![output hexo](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_hexo.PNG)
 
@@ -83,7 +83,7 @@ $ nvm install stable
 ```
 ![nvm](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/nvm.PNG)
 
-Jika sudah terinstal lakukan pengecekan agar memastikan node js sudah terinstal
+Jika sudah terinstal lakukan pengecekan agar memastikan Node.Js sudah terinstal
 
 ![version](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/version_nvm&npm.PNG)
 
@@ -112,18 +112,18 @@ $ cd my-blog
 $ npm install
 $ hexo server -d
 ```
-setelah melakukan perintah diatas kita sudah bisa membuka hexo yang telah terinstal di localhsot kita ,berikut adalah output dari kode diatas apabila sukses membuat hexo dan juga tampilan hompage dari hexo tersebut.
+Setelah melakukan perintah diatas kita sudah bisa membuka Hexo yang telah terinstal di localhsot kita, berikut adalah output dari kode diatas apabila sukses membuat Hexo dan juga tampilan hompage dari Hexo tersebut.
 ![output init](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_init.PNG)
 
 ![dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/dashboard.PNG)
 
-### 2. Instal plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
+### 2. Ihttps://github.com/hexojs/hexonstal plugin [hexo-admin](https://github.com/jaredly/hexo-admin)
 ``` bash
 $ npm install --save hexo-admin
 $ hexo server -d
 $ open http://localhost:4000/admin/
 ```
-setelah melakukan install , akan terbuat page admin secara otomatis , berikut adalah output dari install dan page admin. Walaupun ada error pada saat menginstal tapi program hexo ini tetap berjalan dengan lancar.
+Setelah melakukan install, akan terbuat page admin secara otomatis. Berikut adalah output dari install dan page admin. 
 ![output admin](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/output_admin.PNG)
 ![admin dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/admin.PNG)
 
@@ -133,7 +133,7 @@ setelah melakukan install , akan terbuat page admin secara otomatis , berikut ad
 $ cd my-blog
 $ cd themes
 ```
-Seltelah masuk ke folder themes kita clone tema yang di inginkan.
+Setelah masuk ke folder themes kita clone tema yang di inginkan.
 ### 2. Clone tema yang diinginkan
 Kita gunakan tema clover sebagai contoh
 ``` bash
@@ -154,7 +154,7 @@ $ npm install hexo-renderer-sass --save
 ![tema](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/tema_new.PNG)
 # Maintenance
 ## Menambahkan password
-Jika Anda menggunakan plugin [hexo-admin](https://github.com/jaredly/hexo-admin) di live server Anda, Anda perlu perlindungan kata sandi. Untuk mengaktifkannya, Anda cukup menambahkan beberapa variabel konfigurasi ke hexo `_config.yml` Anda:
+Jika Anda menggunakan plugin [hexo-admin](https://github.com/jaredly/hexo-admin) di live server Anda, Anda perlu perlindungan kata sandi. Untuk mengaktifkannya, Anda cukup menambahkan beberapa variabel konfigurasi ke Hexo `_config.yml` Anda:
 ``` bash
 admin:
   username: myfavoritename
@@ -168,10 +168,10 @@ Sebuah utility di Pengaturan admin Hexo dapat melakukan hash pada kata sandi And
 
 [![Password](http://searlas.top/images/pasted-0.png)](https://github.com/DartedMonki)
 
-Setelah itu, mulai server hexo Anda dan pergi ke `/admin/`, Anda akan diminta untuk memasukkan kata sandi.
+Setelah itu, mulai server Hexo Anda dan pergi ke `/admin/`, Anda akan diminta untuk memasukkan kata sandi.
 ![admin dashboard](https://github.com/DartedMonki/Hexo/blob/master/Screenshoot/admin_login.PNG)
 ## Melakukan kustomisasi post metadata
-Untuk menambah dan mengedit post metadata Anda dengan antarmuka admin, tambahkan variabel metadata dan variabel khusus Anda ke hexo `_config.yml` Anda:
+Untuk menambah dan mengedit post metadata Anda dengan antarmuka admin, tambahkan variabel metadata dan variabel khusus Anda ke Hexo `_config.yml` Anda:
 ``` bash
 metadata:
   author_id: defaultAuthorId
@@ -182,7 +182,7 @@ Anda dapat memberikan nilai default yang akan digunakan untuk menginisialisasi m
 
 # Cara Pemakaian
 ## Membuat Blog
-Setelah melakukan instalasi hexo, buatlah blog dengan menggunakan Hexo CLI Tool :
+Setelah melakukan instalasi Hexo, buatlah blog dengan menggunakan Hexo CLI Tool :
 ``` bash
 hexo init <tempat penyimpanan> && $_
 ```
@@ -201,17 +201,17 @@ Lokasi dari file tersebut akan berada di `source/_posts`
 ## Membuat artikel baru dengan [hexo-admin](https://github.com/jaredly/hexo-admin)
 ### 1. Pilih tab post
 Akan terlihat semua post yang telah dibuat
-[![TabPost](https://raw.githubusercontent.com/jaredly/hexo-admin/master/docs/pasted-0.png)](https://github.com/DartedMonki)
+![TabPost](https://raw.githubusercontent.com/jaredly/hexo-admin/master/docs/pasted-0.png)
 ## 2. Pilih new post
 Ketik isi post baru yang nantinya akan di preview secara real time di editor
-[![NewPost](https://raw.githubusercontent.com/jaredly/hexo-admin/master/docs/pasted-1.png)](https://github.com/DartedMonki)
+![NewPost](https://raw.githubusercontent.com/jaredly/hexo-admin/master/docs/pasted-1.png)
 
 # Pembahasan
 Hexo merupakan sebuah blog framework yang cepat, sederhana, dan kuat yang didukung oleh [Node.js](https://nodejs.org). Anda menulis posting dalam Markdown (atau bahasa lain) dan Hexo menghasilkan file statis dengan tema yang indah dalam hitungan detik.
 
 ## Kelebihan dan Kekurangan Hexo
 ### Kelebihan
-Berikut merupakan kelebihan dari hexo :
+Berikut merupakan kelebihan dari Hexo :
 1. Tidak harus bolak-balik upload via FTP jika ingin mengupdate artikel baru
 2. Lain halnya dengan Hexo, aplikasi SSG yang dibuat menggunakan nodejs ini memiliki plugin yang bisa deploy website dengan banyak cara salah satunya dengan FTP
 3. Dapat dengan cepat create & deploy blog pribadi ke dalam Github Pages
@@ -250,7 +250,7 @@ Jekyll juga memiliki beberapa kekurangan seperti:
 7. Github Pages mendukung Jekyll tetapi hanya satu set Github-safe-plugin yang dapat digunakan
 8. Tidak ada built-in support untuk livereload
 
-Ada lebih sedikit tutorial untuk Hexo dibandingkan dengan Jekyll tetapi dokumentasinya jelas, mudah diikuti dan lebih straightforward serta Hexo berbasis NodeJs yang mudah untuk diinstal. Pada hexo terdapat kumpulan tema yang dapat memanjakan mata serta mudah dalam mendeploynya ke GitHub Pages.
+Ada lebih sedikit tutorial untuk Hexo dibandingkan dengan Jekyll tetapi dokumentasinya jelas, mudah diikuti dan lebih straightforward serta Hexo berbasis NodeJs yang mudah untuk diinstal. Pada Hexo terdapat kumpulan tema yang dapat memanjakan mata serta mudah dalam mendeploynya ke GitHub Pages.
 
 Menggunakan Hexo (atau statis website lainnya) memberikan keuntungan dalam hal SEO karena dengan menggunakan website statis, kita bisa memanfaatkan hosting gratis yang space kecil (antara 5mb-10mb). Website statis yang dihasilkan oleh Hugo dan Hexo juga bisa digunakan pada server yang tidak mendukung PHP server seperti Apache, Nginx, Litespeed, dll. 
 
@@ -259,6 +259,11 @@ Menggunakan Hexo (atau statis website lainnya) memberikan keuntungan dalam hal S
 https://www.techiediaries.com/jekyll-hugo-hexo/
 
 https://kaqfa.github.io/2016/12/kenapa-saya-memilih-hexo/
+
+https://hexo.io/docs/
+
+https://github.com/hexojs/hexo
+
 
 # Team
 | <a href="https://github.com/DartedMonki" target="_blank">**Afriyadi YR**</a> | <a href="https://github.com/reyhannuurakbar" target="_blank">**Reyhan NA**</a> | <a href="https://github.com/g64160084" target="_blank">**Feterachman BY**</a> | <a href="https://github.com/MarsaMD" target="_blank">**Marsa MD**</a> |
